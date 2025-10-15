@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Computer Basics Quiz - By Rutunjay</title>
+<style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f5f6fa;
+    padding: 25px;
+  }
+  .quiz-container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 5px;
+  }
+  .creator {
+    text-align: center;
+    font-style: italic;
+    color: #2f3640;
+    font-size: 16px;
+    margin-bottom: 25px;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #4c8bf5; }
+    to { text-shadow: 0 0 15px #1a73e8; }
+  }
+  .question {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+  }
+  .option {
+    background: #f0f0f0;
+    border: none;
+    padding: 12px;
+    margin: 6px 0;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+  }
+  .option:hover { background: #e0ebff; }
+  .correct { background-color: #4CAF50 !important; color: white; }
+  .incorrect { background-color: #e74c3c !important; color: white; }
+  .explanation {
+    margin-top: 10px;
+    font-size: 15px;
+    background: #eef3ff;
+    padding: 10px;
+    border-left: 4px solid #0056b3;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>💻 Smart Computer Basics Quiz</h2>
+  <div class="creator">By Rutunjay</div>
+
+  <!-- 1 -->
+  <div class="question">
+    <p><b>1.</b> What is the full form of GPU?</p>
+    <button class="option" onclick="checkAnswer(this,true,'GPU = Graphics Processing Unit, it renders images and videos.')">Graphics Processing Unit</button>
+    <button class="option" onclick="checkAnswer(this,false,'GPU doesn’t mean General Processing Unit; “Graphics” is key.')">General Processing Unit</button>
+    <button class="option" onclick="checkAnswer(this,false,'Not Graphical Power Utility — that term doesn’t exist.')">Graphical Power Utility</button>
+    <button class="option" onclick="checkAnswer(this,false,'Graph Processing User is not a real computer term.')">Graph Processing User</button>
+  </div>
+
+  <!-- 2 -->
+  <div class="question">
+    <p><b>2.</b> How many TB are in one PB (Petabyte) in a computer system?</p>
+    <button class="option" onclick="checkAnswer(this,true,'Correct! In binary system, 1 PB = 1024 TB.')">1024 TB</button>
+    <button class="option" onclick="checkAnswer(this,false,'1000 TB = 1 PB only in decimal storage marketing, not binary.')">1000 TB</button>
+    <button class="option" onclick="checkAnswer(this,false,'512 TB = half PB, incorrect.')">512 TB</button>
+    <button class="option" onclick="checkAnswer(this,false,'2048 TB = 2 PB, wrong value.')">2048 TB</button>
+  </div>
+
+  <!-- 3 -->
+  <div class="question">
+    <p><b>3.</b> What does SSD stand for?</p>
+    <button class="option" onclick="checkAnswer(this,true,'SSD = Solid State Drive; it uses flash memory, no moving disks.')">Solid State Drive</button>
+    <button class="option" onclick="checkAnswer(this,false,'Simple Storage Device is not a technical term.')">Simple Storage Device</button>
+    <button class="option" onclick="checkAnswer(this,false,'Serial Storage Disk doesn’t exist.')">Serial Storage Disk</button>
+    <button class="option" onclick="checkAnswer(this,false,'System Software Disk is incorrect.')">System Software Disk</button>
+  </div>
+
+  <!-- 4 -->
+  <div class="question">
+    <p><b>4.</b> Which one of these is a software type?</p>
+    <button class="option" onclick="checkAnswer(this,true,'System Software like Windows manages hardware and other software.')">System Software</button>
+    <button class="option" onclick="checkAnswer(this,false,'Display Card is hardware, not software.')">Display Card</button>
+    <button class="option" onclick="checkAnswer(this,false,'Keyboard is input hardware.')">Keyboard</button>
+    <button class="option" onclick="checkAnswer(this,false,'Monitor is output hardware.')">Monitor</button>
+  </div>
+
+  <!-- 5 -->
+  <div class="question">
+    <p><b>5.</b> What is the main function of the CPU?</p>
+    <button class="option" onclick="checkAnswer(this,true,'CPU processes instructions and controls all operations.')">To process data and control operations</button>
+    <button class="option" onclick="checkAnswer(this,false,'CPU doesn’t store data permanently.')">To store data permanently</button>
+    <button class="option" onclick="checkAnswer(this,false,'CPU doesn’t display results; monitor does.')">To display output</button>
+    <button class="option" onclick="checkAnswer(this,false,'CPU doesn’t print documents.')">To print documents</button>
+  </div>
+
+  <!-- 6 -->
+  <div class="question">
+    <p><b>6.</b> What is the full form of ROM?</p>
+    <button class="option" onclick="checkAnswer(this,true,'ROM = Read Only Memory — permanent, non-volatile storage.')">Read Only Memory</button>
+    <button class="option" onclick="checkAnswer(this,false,'Not Random Operation Memory.')">Random Operation Memory</button>
+    <button class="option" onclick="checkAnswer(this,false,'Not Rapid Output Module.')">Rapid Output Module</button>
+    <button class="option" onclick="checkAnswer(this,false,'Not Rewritable Operating Memory.')">Rewritable Operating Memory</button>
+  </div>
+
+  <!-- 7 -->
+  <div class="question">
+    <p><b>7.</b> What does BIOS stand for?</p>
+    <button class="option" onclick="checkAnswer(this,true,'BIOS = Basic Input Output System; it starts the computer and loads OS.')">Basic Input Output System</button>
+    <button class="option" onclick="checkAnswer(this,false,'Binary Input Output Storage is incorrect.')">Binary Input Output Storage</button>
+    <button class="option" onclick="checkAnswer(this,false,'Boot Internal Operating System is wrong.')">Boot Internal Operating System</button>
+    <button class="option" onclick="checkAnswer(this,false,'Basic Integrated Output Setup is not used.')">Basic Integrated Output Setup</button>
+  </div>
+
+  <!-- 8 -->
+  <div class="question">
+    <p><b>8.</b> Which device is used for permanent storage of data?</p>
+    <button class="option" onclick="checkAnswer(this,true,'Hard Disk Drive stores data permanently until deleted.')">Hard Disk Drive (HDD)</button>
+    <button class="option" onclick="checkAnswer(this,false,'RAM is temporary storage, not permanent.')">RAM</button>
+    <button class="option" onclick="checkAnswer(this,false,'Cache Memory is temporary and small in size.')">Cache Memory</button>
+    <button class="option" onclick="checkAnswer(this,false,'Registers are temporary storage in CPU.')">Registers</button>
+  </div>
+
+  <!-- 9 -->
+  <div class="question">
+    <p><b>9.</b> What does OS stand for in computing?</p>
+    <button class="option" onclick="checkAnswer(this,true,'OS = Operating System; software that manages hardware and applications.')">Operating System</button>
+    <button class="option" onclick="checkAnswer(this,false,'Output System is not a software category.')">Output System</button>
+    <button class="option" onclick="checkAnswer(this,false,'Open Software is not an official term.')">Open Software</button>
+    <button class="option" onclick="checkAnswer(this,false,'Office Suite is application software, not OS.')">Office Suite</button>
+  </div>
+
+  <!-- 10 -->
+  <div class="question">
+    <p><b>10.</b> Which of these is an example of an input device?</p>
+    <button class="option" onclick="checkAnswer(this,true,'Keyboard inputs data to the computer.')">Keyboard</button>
+    <button class="option" onclick="checkAnswer(this,false,'Monitor is an output device.')">Monitor</button>
+    <button class="option" onclick="checkAnswer(this,false,'Printer produces output on paper.')">Printer</button>
+    <button class="option" onclick="checkAnswer(this,false,'Speaker is output for sound.')">Speaker</button>
+  </div>
+</div>
+
+<script>
+function checkAnswer(button, isCorrect, explanation) {
+  const questionDiv = button.parentNode;
+  const options = questionDiv.querySelectorAll('.option');
+  options.forEach(opt => opt.disabled = true);
+  options.forEach(opt => {
+    if (opt.getAttribute('onclick').includes('true')) opt.classList.add('correct');
+  });
+  if (!isCorrect) button.classList.add('incorrect');
+  const expDiv = document.createElement('div');
+  expDiv.classList.add('explanation');
+  expDiv.innerHTML = "<b>Explanation:</b> " + explanation;
+  questionDiv.appendChild(expDiv);
+}
+</script>
+
+</body>
+</html>
